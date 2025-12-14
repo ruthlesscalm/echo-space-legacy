@@ -8,18 +8,18 @@
     <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
-    <header class="bg-(--header-bg-color) p-4 flex items-center justify-between">
+    <header class="bg-(--header-bg-color) text-white p-4 flex items-center justify-between">
         <div>
-            <h1>Echo Space</h1>
+            <img src="/assets/logo.png" alt="Echo Space Logo" class="h-14 cursor-pointer" title="Echo Space">
         </div>
-        <form action="/search" method="get">
+        <form action="/search" method="get" class="flex items-center">
             <input type="text" name="query" placeholder="Search for songs, artists, or albums" required>
             <button type="submit">
                 <img src="/assets/search.svg" alt="Search">
             </button>
         </form>
         <nav>
-            <ul>
+            <ul class="flex gap-1">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><button>Login</button></li> 
