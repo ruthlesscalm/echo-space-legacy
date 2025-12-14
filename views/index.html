@@ -5,8 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Echo Space</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
-    Hello World from Echo Space!
+    <header class="bg-(--header-bg-color) p-4 flex items-center justify-between">
+        <div>
+            <h1>Echo Space</h1>
+        </div>
+        <form action="/search" method="get">
+            <input type="text" name="query" placeholder="Search for songs, artists, or albums" required>
+            <button type="submit">
+                <img src="/assets/search.svg" alt="Search">
+            </button>
+        </form>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><button>Login</button></li> 
+            </ul>
+        </nav>
+    </header>
 </body>
 </html>
