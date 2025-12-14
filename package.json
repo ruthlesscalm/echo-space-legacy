@@ -1,0 +1,28 @@
+{
+  "name": "echo-space",
+  "version": "1.0.0",
+  "description": "This is a music player",
+  "keywords": [
+    "Music",
+    "player"
+  ],
+  "homepage": "https://github.com/ruthlesscalm/echo-space#readme",
+  "bugs": {
+    "url": "https://github.com/ruthlesscalm/echo-space/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruthlesscalm/echo-space.git"
+  },
+  "license": "ISC",
+  "author": "Ruthless Calm",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
