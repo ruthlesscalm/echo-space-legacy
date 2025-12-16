@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="/css/home.css">
 </head>
 
-<body>
+<body class="bg-(--main-bg-color)">
     <header class="bg-(--header-bg-color) text-white p-4 flex items-center justify-between">
-        <div>
+        <div class="flex gap-2 items-center">
             <img src="/assets/logo.png" alt="Echo Space Logo" class="h-10 cursor-pointer" title="Echo Space">
+            <h1 class="text-white text-2xl font-bold">Echo Space</h1>
         </div>
         <form action="/search" method="get" class="flex items-center gap-10 relative">
             <input type="text" name="query" placeholder="Search for songs, artists, or albums" required
@@ -24,12 +25,17 @@
         </form>
         <nav>
             <ul class="flex gap-5 items-center">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li class="nav-links"><a href="#">Home</a></li>
+                <li class="nav-links"><a href="#">About</a></li>
                 <li><button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded cursor-pointer">Login</button></li>
             </ul>
         </nav>
     </header>
+    <main>
+        <section>
+            <h1></h1>
+        </section>
+    </main>
 </body>
 
 </html>
