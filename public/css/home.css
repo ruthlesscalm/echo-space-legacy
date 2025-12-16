@@ -1,38 +1,29 @@
-:root {
-    --header-bg-color: #191f43;
-    --search-bg-color: #1B3C53;
-    --nav-link-hover-color: #FFFFFF;
-    --main-bg-color: #0a123d;
-}
-.nav-links{
+.list-hover {
     position: relative;
-    cursor: pointer;
 }
-.nav-links::before{
+
+.list-hover::before,
+.list-hover::after {
     content: "";
     position: absolute;
-    bottom: -3px;
+    bottom: -2px;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: width 0.25s ease-out;
+}
+
+.list-hover::before {
     left: 50%;
     transform: translateX(-50%);
-    width: 0;
-    height: 3px;
-    background-color: var(--nav-link-hover-color);
 }
-.nav-links::after{
-    content: "";
-    position: absolute;
-    bottom: -3px;
+
+.list-hover::after {
     right: 50%;
     transform: translateX(50%);
-    width: 0;
-    height: 3px;
-    background-color: var(--nav-link-hover-color);
 }
-.nav-links:hover::before{
+
+.list-hover:hover::before,
+.list-hover:hover::after {
     width: 100%;
-    transition: width 0.3s ease-in-out;
-}
-.nav-links:hover::after{
-    width: 100%;
-    transition: width 0.3s ease-in-out;
 }

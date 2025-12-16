@@ -9,31 +9,58 @@
     <link rel="stylesheet" href="/css/home.css">
 </head>
 
-<body class="bg-(--main-bg-color)">
-    <header class="bg-(--header-bg-color) text-white p-4 flex items-center justify-between">
-        <div class="flex gap-2 items-center">
-            <img src="/assets/logo.png" alt="Echo Space Logo" class="h-10 cursor-pointer" title="Echo Space">
-            <h1 class="text-white text-2xl font-bold">Echo Space</h1>
+<body class="bg-slate-800">
+   <header class="bg-slate-700 text-white flex justify-between items-center px-[clamp(20px,3.33vw,64px)] py-[clamp(8px,0.625vw,12px)]">
+        <div class="flex items-center">
+            <h1 class="text-[clamp(20px,3vw,40px)] cursor-pointer">Melodio</h1>
         </div>
-        <form action="/search" method="get" class="flex items-center gap-10 relative">
-            <input type="text" name="query" placeholder="Search for songs, artists, or albums" required
-                class="bg-(--search-bg-color) pl-4 pr-10 py-2 rounded-full text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <button type="submit"
-                class="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer focus:outline-none">
-                <img src="/assets/search.svg" alt="Search" class="h-5">
+        <form action="/search" method="GET" class="flex items-center relative rounded-full max-[500px]:hidden">
+            <input 
+                id="search"
+                name="search"
+                class="placeholder-inherit rounded-full block pl-7 pr-10 py-2 bg-slate-500 text-[clamp(12px,1.5vw,20px)]"
+                type="text"
+                placeholder="What do you want to Play?"
+            >
+            <button type="submit" class="absolute right-[5%]">
+                <img class="w-[clamp(15px,1.667vw,24px)] cursor-pointer" src="assets/search.svg">
             </button>
         </form>
+        
         <nav>
-            <ul class="flex gap-5 items-center">
-                <li class="nav-links"><a href="#">Home</a></li>
-                <li class="nav-links"><a href="#">About</a></li>
-                <li><button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded cursor-pointer">Login</button></li>
+            <ul class="flex gap-[clamp(10px,1.9vw,40px)] items-center">
+                <li class="list-hover cursor-pointer text-[clamp(12px,1.3888vw,22px)]">
+                    <a href="#">Home</a>
+                </li>
+                <li class="list-hover cursor-pointer text-[clamp(12px,1.3888vw,22px)]">
+                    <a href="/about">About</a>
+                </li>
+                <li><button class="bg-slate-300 text-black px-[clamp(5px,1.111vw,20px)] py-[clamp(1.25px,2.7775vw,5px)] rounded-full hover:scale-105 text-[clamp(12px,1.3888vw,22px)]" id="login">Login</button></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <h1></h1>
+        <section class="py-5 flex flex-col gap-4 relative">
+            <h2 class="text-white text-[clamp(16px,1.945vw,28px)] font-medium px-[clamp(24px,4vw,76.8px)]">Sad Songs</h2>
+            <div class="mask">
+                <div class="absolute left-10 top-1/2 -translate-y-1/2">
+                    <button class="z-10 btn-left"><img class="w-10" src="/assets/leftArrow.svg" alt="Scroll Left"></button>
+                </div>
+                <div class="absolute right-10 top-1/2 -translate-y-1/2 right-arrow">
+                    <button class="z-10 btn-right"><img class="w-10" src="/assets/rightArrow.svg" alt="Scroll Right"></button>
+                </div>
+                <ul class="hide-scrollbar flex gap-5 overflow-y-scroll px-[clamp(24px,4vw,76.8px)] song-list">
+                    <li class="flex flex-col gap-2 flex-shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
+                        <figure class="p-1">
+                            <img class="w-36 rounded-sm" src="/assets/image.png">
+                        </figure>
+                        <div class="pl-3 pb-2 flex flex-col">
+                            <p class="text-white text-[clamp(14px,1.5vw,21.5px)]">Bargad</p>
+                            <p class="text-slate-300 text-[clamp(11.5px,1.111vw,16px)] text-sm">Authors</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </section>
     </main>
 </body>
