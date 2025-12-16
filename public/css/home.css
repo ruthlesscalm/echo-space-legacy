@@ -27,3 +27,15 @@
 .list-hover:hover::after {
     width: 100%;
 }
+
+.hide-scrollbar {
+    /* Firefox */
+    scrollbar-width: none;
+
+    /* Internet Explorer and Edge (legacy) */
+    -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
