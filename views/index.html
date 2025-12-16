@@ -14,9 +14,9 @@
         <div class="flex items-center">
             <h1 class="text-[clamp(20px,3vw,40px)] cursor-pointer">Melodio</h1>
         </div>
-        <form action="/search" method="GET" class="flex items-center relative rounded-full max-[500px]:hidden">
-            <input id="search" name="query" class="placeholder-inherit rounded-full block pl-7 pr-10 py-2 bg-slate-500 text-[clamp(12px,1.5vw,20px)] focus:outline-none focus:ring-2 focus:ring-white" type="text" placeholder="What do you want to Play?" required>
-            <button type="submit" class="absolute right-[5%]">
+        <form action="/search" method="GET" class="flex items-center relative max-[500px]:hidden">
+            <input id="search" name="query" class="placeholder-inherit rounded-full pl-7 max-sm:pl-4 pr-12 max-sm:pr-7 max-lg:pr-10 py-2 bg-slate-500 text-[clamp(12px,1.5vw,20px)] focus:outline-none focus:ring-2 focus:ring-white box-content w-[90%] max-sm:w-[70%]" type="text" placeholder="What do you want to Play?" required>
+            <button type="submit" class="absolute right-[5%] max-sm:right-[15%]">
                 <img class="w-[clamp(15px,1.667vw,24px)] cursor-pointer" src="assets/search.svg">
             </button>
         </form>
