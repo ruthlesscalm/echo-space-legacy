@@ -15,13 +15,7 @@
             <h1 class="text-[clamp(20px,3vw,40px)] cursor-pointer">Melodio</h1>
         </div>
         <form action="/search" method="GET" class="flex items-center relative rounded-full max-[500px]:hidden">
-            <input 
-                id="search"
-                name="search"
-                class="placeholder-inherit rounded-full block pl-7 pr-10 py-2 bg-slate-500 text-[clamp(12px,1.5vw,20px)]"
-                type="text"
-                placeholder="What do you want to Play?"
-            >
+            <input id="search" name="query" class="placeholder-inherit rounded-full block pl-7 pr-10 py-2 bg-slate-500 text-[clamp(12px,1.5vw,20px)] focus:outline-none focus:ring-2 focus:ring-white" type="text" placeholder="What do you want to Play?" required>
             <button type="submit" class="absolute right-[5%]">
                 <img class="w-[clamp(15px,1.667vw,24px)] cursor-pointer" src="assets/search.svg">
             </button>
@@ -35,7 +29,7 @@
                 <li class="list-hover cursor-pointer text-[clamp(12px,1.3888vw,22px)]">
                     <a href="/about">About</a>
                 </li>
-                <li><button class="bg-slate-300 text-black px-[clamp(5px,1.111vw,20px)] py-[clamp(1.25px,2.7775vw,5px)] rounded-full hover:scale-105 text-[clamp(12px,1.3888vw,22px)]" id="login">Login</button></li>
+                <li><button class="bg-slate-300 text-black px-[clamp(5px,1.111vw,20px)] py-[clamp(1.25px,2.7775vw,5px)] rounded text-[clamp(12px,1.3888vw,22px)] hover:bg-slate-400 cursor-pointer" id="login">Login</button></li>
             </ul>
         </nav>
     </header>
@@ -49,8 +43,8 @@
                 <div class="absolute right-10 top-1/2 -translate-y-1/2 right-arrow">
                     <button class="z-10 btn-right"><img class="w-10" src="/assets/rightArrow.svg" alt="Scroll Right"></button>
                 </div>
-                <ul class="hide-scrollbar flex gap-5 overflow-y-scroll px-[clamp(24px,4vw,76.8px)] song-list">
-                    <li class="flex flex-col gap-2 flex-shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
+                <ul class="hide-scrollbar flex gap-5 overflow-x-scroll px-[clamp(24px,4vw,76.8px)] song-list">
+                    <li class="flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
                         <figure class="p-1">
                             <img class="w-36 rounded-sm" src="/assets/image.png">
                         </figure>
