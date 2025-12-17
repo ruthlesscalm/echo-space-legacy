@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Echo Space - Login</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/login.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Echo Space · Login</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/auth.css" />
 </head>
+
 <body class="bg-slate-800">
-    <main class="text-white flex flex-col items-center justify-center h-[90vh]">
-        <div class="bg-slate-700 px-10 py-10 flex flex-col gap-8 form-box">
-            <h1 class="text-[clamp(24px,4.9157vw,56px)] text-center">Welcome Back</h1>
-            <form action="/request" method="post" class="flex flex-col gap-6">
-                <div class="flex flex-col gap-2">
-                    <label class="text-[clamp(14px,2.8vw,22px)]" for="email">Email</label>
-                    <input class="px-4 py-2 bg-transparent outline-none border border-gray-400 rounded-sm focus-visible:border-white text-[20px]" type="email" name="email" id="email" placeholder="Enter your email">
+    <main class="min-h-screen flex items-center justify-center text-white px-4">
+        <section aria-labelledby="login-heading"
+            class="w-full max-w-md bg-slate-700 rounded-lg px-8 py-8 flex flex-col gap-6">
+            <h1 id="login-heading" class="text-center font-semibold text-[clamp(22px,2.4vw,32px)]">
+                Welcome back
+            </h1>
+
+            <form action="/request" method="post" class="flex flex-col gap-5">
+                <div class="flex flex-col gap-1.5">
+                    <label for="email" class="text-sm text-gray-300">Email</label>
+                    <input id="email" name="email" type="email" required autocomplete="email"
+                        placeholder="you@example.com" class="bg-transparent border border-gray-400 rounded px-3 py-2 text-[clamp(14px,1.1vw,16px)]
+                   focus-visible:border-white focus-visible:outline-none" />
                 </div>
-                <div class="flex flex-col gap-2">
-                    <label class="text-[clamp(14px,2.8vw,22px)]" for="password">Password</label>
-                    <input class="px-4 py-2 bg-transparent outline-none border border-gray-400 rounded-sm focus-visible:border-white text-[20px]" type="password" name="password" id="password" placeholder="Enter your password">
+
+                <div class="flex flex-col gap-1.5">
+                    <label for="password" class="text-sm text-gray-300">Password</label>
+                    <input id="password" name="password" type="password" required autocomplete="current-password"
+                        placeholder="Your password" class="bg-transparent border border-gray-400 rounded px-3 py-2 text-[clamp(14px,1.1vw,16px)]
+                   focus-visible:border-white focus-visible:outline-none" />
                 </div>
-                <button class="px-4 py-3 bg-cyan-800 rounded-full text-[clamp(18px,2.8vw,22px)]" type="submit">Login</button>
+
+                <button type="submit" class="mt-2 rounded-full bg-cyan-800 py-2.5 text-[clamp(15px,1.2vw,17px)]
+                 hover:bg-cyan-700 transition">
+                    Login
+                </button>
             </form>
-        </div>
-        <div class="py-5 flex flex-col items-center gap-3">
-            <p class="text-[20px]">New to Melodio?</p>
-            <a class="text-gray-400 text-[20px] hover:text-gray-100" href="/register">Sign up here</a>
-        </div>
+
+            <p class="text-center text-sm text-gray-400">
+                New to Echo Space?
+                <a href="/register" class="text-gray-200 hover:underline">Create an account</a>
+            </p>
+        </section>
     </main>
-    
 </body>
+
 </html>

@@ -1,0 +1,9 @@
+/* Auth pages (login & register)
+   Reserved for validation states, errors, and auth-specific UI */
+
+@media screen and (max-width: 400px) {
+    .form-box {
+        width: 90vw;
+        padding: 30px 20px;
+    }
+}
