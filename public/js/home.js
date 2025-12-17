@@ -1,4 +1,4 @@
-const masks = Array.from(document.getElementsByClassName("mask-effect"));
+const masks = Array.from(document.getElementsByClassName("mask"));
 const songLists = Array.from(document.getElementsByClassName("song-list"));
 const leftBtns = Array.from(document.getElementsByClassName("btn-left"));
 const rightBtns = Array.from(document.getElementsByClassName("btn-right"));
@@ -14,20 +14,24 @@ masks.forEach((mask, index) => {
         let currentScroll = songList.scrollLeft;
 
         if(maxScroll <= 0) {
+            mask.className = "mask";
             leftBtn.style.display = "none";
             rightBtn.style.display = "none";
             return;
         }
 
-        if (currentScroll < 10) {
+        if (currentScroll <= 10) {
+            mask.className = "mask fade-right";
             leftBtn.style.display = "none";
             rightBtn.style.display = "inline-block";
         }
         else if (currentScroll >= maxScroll - 10) {
+            mask.className = "mask fade-left";
             rightBtn.style.display = "none";
             leftBtn.style.display = "inline-block";
         }
         else {
+            mask.className = "mask fade-both";
             leftBtn.style.display = "inline-block";
             rightBtn.style.display = "inline-block";
         }
