@@ -43,28 +43,30 @@
 .fade-left {
     mask-image: linear-gradient(
         to right,
-        tranparent,
+        transparent,
         black 10%,
         black 100%
     );
     mask-size: 100% 100%;
 }
+
 .fade-both {
     mask-image: linear-gradient(
         to right,
-        tranparent,
+        transparent,
         black 10%,
         black 90%,
-        tranparent
+        transparent
     );
     mask-size: 100% 100%;
 }
+
 .fade-right {
     mask-image: linear-gradient(
         to right,
         black 0%,
         black 90%,
-        tranparent
+        transparent
     );
     mask-size: 100% 100%;
 }
