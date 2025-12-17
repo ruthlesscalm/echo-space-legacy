@@ -3,6 +3,7 @@ const songLists = Array.from(document.getElementsByClassName("song-list"));
 const leftBtns = Array.from(document.getElementsByClassName("btn-left"));
 const rightBtns = Array.from(document.getElementsByClassName("btn-right"));
 
+const loginBtn = document.getElementById("login");
 
 masks.forEach((mask, index) => {
     const songList = songLists[index];
@@ -73,4 +74,8 @@ masks.forEach((mask, index) => {
     rightBtn.addEventListener("click", () => {
         smoothScroll(scrollAmount());
     });
+});
+
+loginBtn.addEventListener("click", () => {
+    window.location.href = "/login";
 });

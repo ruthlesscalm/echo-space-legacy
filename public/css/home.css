@@ -70,3 +70,13 @@
     );
     mask-size: 100% 100%;
 }
+
+.song-item:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 2px white;
+    background-color: rgb(51 65 85); /* slate-700 */
+}
+
+.song-item:focus-visible {
+  outline: none;
+}

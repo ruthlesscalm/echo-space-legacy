@@ -15,6 +15,7 @@
             <h1 class="text-[clamp(20px,3vw,40px)] cursor-pointer">Melodio</h1>
         </div>
         <form action="/search" method="GET" class="flex items-center relative max-[500px]:hidden">
+            <label for="search" class="sr-only">Search songs</label>
             <input id="search" name="query" class="placeholder-inherit rounded-full pl-7 max-sm:pl-4 pr-12 max-sm:pr-7 max-lg:pr-10 py-2 bg-slate-500 text-[clamp(12px,1.5vw,20px)] focus:outline-none focus:ring-2 focus:ring-white box-content w-[90%] max-sm:w-[70%]" type="text" placeholder="What do you want to Play?" required>
             <button type="submit" class="absolute right-[5%] max-sm:right-[15%]">
                 <img class="w-[clamp(15px,1.667vw,24px)] cursor-pointer" src="assets/search.svg">
@@ -24,7 +25,7 @@
         <nav>
             <ul class="flex gap-[clamp(10px,1.9vw,40px)] items-center">
                 <li class="list-hover cursor-pointer text-[clamp(12px,1.3888vw,22px)]">
-                    <a href="#">Home</a>
+                    <a href="/" aria-current="page">Home</a>
                 </li>
                 <li class="list-hover cursor-pointer text-[clamp(12px,1.3888vw,22px)]">
                     <a href="/about">About</a>
@@ -41,138 +42,138 @@
                     <button class="z-10 btn-left cursor-pointer"><img class="w-10" src="/assets/left-arrow.svg" alt="Scroll Left"></button>
                 </div>
                 <div class="absolute right-10 top-1/2 -translate-y-1/2">
-                    <button class="z-10 btn-right cursor-pointer"><img class="w-10" src="/assets/right-arrow.svg" alt="Scroll Right"></button>
+                    <button class="z-10 btn-right cursor-pointer"><img class="w-10" src="/assets/right-arrow.svg" alt="Scroll Right" aria-label="Scroll songs right" aria-controls="sad-songs-list"></button>
                 </div>
-                <ul class="hide-scrollbar flex gap-5 overflow-x-auto px-[clamp(24px,4vw,76.8px)] song-list">
-                    <li class="flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
+                <ul id="sad-songs-list" class="hide-scrollbar flex gap-5 overflow-x-auto px-[clamp(24px,4vw,76.8px)] song-list">
+                    <li tabindex="0" role="button" aria-label="Play song one by Authors" class="song-item flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
                         <figure class="p-1">
-                            <img class="w-36 rounded-sm" src="/assets/image.png">
+                            <img class="w-36 rounded-sm" src="/assets/image.png" alt="Album art for song one">
                         </figure>
                         <div class="pl-3 pb-2 flex flex-col">
                             <p class="text-white text-[clamp(14px,1.5vw,21.5px)]">one</p>
                             <p class="text-slate-300 text-[clamp(11.5px,1.111vw,16px)] text-sm">Authors</p>
                         </div>
                     </li>
-                    <li class="flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
+                    <li tabindex="0" role="button" aria-label="Play song one by Authors" class="song-item flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
                         <figure class="p-1">
-                            <img class="w-36 rounded-sm" src="/assets/image.png">
+                            <img class="w-36 rounded-sm" src="/assets/image.png" alt="Album art for song one">
                         </figure>
                         <div class="pl-3 pb-2 flex flex-col">
                             <p class="text-white text-[clamp(14px,1.5vw,21.5px)]">two</p>
                             <p class="text-slate-300 text-[clamp(11.5px,1.111vw,16px)] text-sm">Authors</p>
                         </div>
                     </li>
-                    <li class="flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
+                    <li tabindex="0" role="button" aria-label="Play song one by Authors" class="song-item flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
                         <figure class="p-1">
-                            <img class="w-36 rounded-sm" src="/assets/image.png">
+                            <img class="w-36 rounded-sm" src="/assets/image.png" alt="Album art for song one">
                         </figure>
                         <div class="pl-3 pb-2 flex flex-col">
                             <p class="text-white text-[clamp(14px,1.5vw,21.5px)]">three</p>
                             <p class="text-slate-300 text-[clamp(11.5px,1.111vw,16px)] text-sm">Authors</p>
                         </div>
                     </li>
-                    <li class="flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
+                    <li tabindex="0" role="button" aria-label="Play song one by Authors" class="song-item flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
                         <figure class="p-1">
-                            <img class="w-36 rounded-sm" src="/assets/image.png">
+                            <img class="w-36 rounded-sm" src="/assets/image.png" alt="Album art for song one">
                         </figure>
                         <div class="pl-3 pb-2 flex flex-col">
                             <p class="text-white text-[clamp(14px,1.5vw,21.5px)]">four</p>
                             <p class="text-slate-300 text-[clamp(11.5px,1.111vw,16px)] text-sm">Authors</p>
                         </div>
                     </li>
-                    <li class="flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
+                    <li tabindex="0" role="button" aria-label="Play song one by Authors" class="song-item flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
                         <figure class="p-1">
-                            <img class="w-36 rounded-sm" src="/assets/image.png">
+                            <img class="w-36 rounded-sm" src="/assets/image.png" alt="Album art for song one">
                         </figure>
                         <div class="pl-3 pb-2 flex flex-col">
                             <p class="text-white text-[clamp(14px,1.5vw,21.5px)]">five</p>
                             <p class="text-slate-300 text-[clamp(11.5px,1.111vw,16px)] text-sm">Authors</p>
                         </div>
                     </li>
-                    <li class="flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
+                    <li tabindex="0" role="button" aria-label="Play song one by Authors" class="song-item flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
                         <figure class="p-1">
-                            <img class="w-36 rounded-sm" src="/assets/image.png">
+                            <img class="w-36 rounded-sm" src="/assets/image.png" alt="Album art for song one">
                         </figure>
                         <div class="pl-3 pb-2 flex flex-col">
                             <p class="text-white text-[clamp(14px,1.5vw,21.5px)]">six</p>
                             <p class="text-slate-300 text-[clamp(11.5px,1.111vw,16px)] text-sm">Authors</p>
                         </div>
                     </li>
-                    <li class="flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
+                    <li tabindex="0" role="button" aria-label="Play song one by Authors" class="song-item flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
                         <figure class="p-1">
-                            <img class="w-36 rounded-sm" src="/assets/image.png">
+                            <img class="w-36 rounded-sm" src="/assets/image.png" alt="Album art for song one">
                         </figure>
                         <div class="pl-3 pb-2 flex flex-col">
                             <p class="text-white text-[clamp(14px,1.5vw,21.5px)]">seven</p>
                             <p class="text-slate-300 text-[clamp(11.5px,1.111vw,16px)] text-sm">Authors</p>
                         </div>
                     </li>
-                    <li class="flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
+                    <li tabindex="0" role="button" aria-label="Play song one by Authors" class="song-item flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
                         <figure class="p-1">
-                            <img class="w-36 rounded-sm" src="/assets/image.png">
+                            <img class="w-36 rounded-sm" src="/assets/image.png" alt="Album art for song one">
                         </figure>
                         <div class="pl-3 pb-2 flex flex-col">
                             <p class="text-white text-[clamp(14px,1.5vw,21.5px)]">eight</p>
                             <p class="text-slate-300 text-[clamp(11.5px,1.111vw,16px)] text-sm">Authors</p>
                         </div>
                     </li>
-                    <li class="flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
+                    <li tabindex="0" role="button" aria-label="Play song one by Authors" class="song-item flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
                         <figure class="p-1">
-                            <img class="w-36 rounded-sm" src="/assets/image.png">
+                            <img class="w-36 rounded-sm" src="/assets/image.png" alt="Album art for song one">
                         </figure>
                         <div class="pl-3 pb-2 flex flex-col">
                             <p class="text-white text-[clamp(14px,1.5vw,21.5px)]">nine</p>
                             <p class="text-slate-300 text-[clamp(11.5px,1.111vw,16px)] text-sm">Authors</p>
                         </div>
                     </li>
-                    <li class="flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
+                    <li tabindex="0" role="button" aria-label="Play song one by Authors" class="song-item flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
                         <figure class="p-1">
-                            <img class="w-36 rounded-sm" src="/assets/image.png">
+                            <img class="w-36 rounded-sm" src="/assets/image.png" alt="Album art for song one">
                         </figure>
                         <div class="pl-3 pb-2 flex flex-col">
                             <p class="text-white text-[clamp(14px,1.5vw,21.5px)]">ten</p>
                             <p class="text-slate-300 text-[clamp(11.5px,1.111vw,16px)] text-sm">Authors</p>
                         </div>
                     </li>
-                    <li class="flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
+                    <li tabindex="0" role="button" aria-label="Play song one by Authors" class="song-item flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
                         <figure class="p-1">
-                            <img class="w-36 rounded-sm" src="/assets/image.png">
+                            <img class="w-36 rounded-sm" src="/assets/image.png" alt="Album art for song one">
                         </figure>
                         <div class="pl-3 pb-2 flex flex-col">
                             <p class="text-white text-[clamp(14px,1.5vw,21.5px)]">eleven</p>
                             <p class="text-slate-300 text-[clamp(11.5px,1.111vw,16px)] text-sm">Authors</p>
                         </div>
                     </li>
-                    <li class="flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
+                    <li tabindex="0" role="button" aria-label="Play song one by Authors" class="song-item flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
                         <figure class="p-1">
-                            <img class="w-36 rounded-sm" src="/assets/image.png">
+                            <img class="w-36 rounded-sm" src="/assets/image.png" alt="Album art for song one">
                         </figure>
                         <div class="pl-3 pb-2 flex flex-col">
                             <p class="text-white text-[clamp(14px,1.5vw,21.5px)]">twelve</p>
                             <p class="text-slate-300 text-[clamp(11.5px,1.111vw,16px)] text-sm">Authors</p>
                         </div>
                     </li>
-                    <li class="flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
+                    <li tabindex="0" role="button" aria-label="Play song one by Authors" class="song-item flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
                         <figure class="p-1">
-                            <img class="w-36 rounded-sm" src="/assets/image.png">
+                            <img class="w-36 rounded-sm" src="/assets/image.png" alt="Album art for song one">
                         </figure>
                         <div class="pl-3 pb-2 flex flex-col">
                             <p class="text-white text-[clamp(14px,1.5vw,21.5px)]">thirteen</p>
                             <p class="text-slate-300 text-[clamp(11.5px,1.111vw,16px)] text-sm">Authors</p>
                         </div>
                     </li>
-                    <li class="flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
+                    <li tabindex="0" role="button" aria-label="Play song one by Authors" class="song-item flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
                         <figure class="p-1">
-                            <img class="w-36 rounded-sm" src="/assets/image.png">
+                            <img class="w-36 rounded-sm" src="/assets/image.png" alt="Album art for song one">
                         </figure>
                         <div class="pl-3 pb-2 flex flex-col">
                             <p class="text-white text-[clamp(14px,1.5vw,21.5px)]">fourteen</p>
                             <p class="text-slate-300 text-[clamp(11.5px,1.111vw,16px)] text-sm">Authors</p>
                         </div>
                     </li>
-                    <li class="flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
+                    <li tabindex="0" role="button" aria-label="Play song one by Authors" class="song-item flex flex-col gap-2 shrink-0 hover:bg-slate-700 rounded-sm cursor-pointer">
                         <figure class="p-1">
-                            <img class="w-36 rounded-sm" src="/assets/image.png">
+                            <img class="w-36 rounded-sm" src="/assets/image.png" alt="Album art for song one">
                         </figure>
                         <div class="pl-3 pb-2 flex flex-col">
                             <p class="text-white text-[clamp(14px,1.5vw,21.5px)]">fifteen</p>
