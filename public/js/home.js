@@ -5,10 +5,10 @@ const rightBtns = Array.from(document.getElementsByClassName("btn-right"));
 
 
 masks.forEach((mask, index) => {
-    let songList = songLists[index];
-    let leftBtn = leftBtns[index];
-    let rightBtn = rightBtns[index];
-    let maxScroll = songList.scrollWidth - songList.clientWidth;
+    const songList = songLists[index];
+    const leftBtn = leftBtns[index];
+    const rightBtn = rightBtns[index];
+    const maxScroll = songList.scrollWidth - songList.clientWidth;
     
     function buttonsVisibility() {
         let currentScroll = songList.scrollLeft;
@@ -36,14 +36,37 @@ masks.forEach((mask, index) => {
     window.addEventListener("resize", buttonsVisibility);
     songList.addEventListener("scroll", buttonsVisibility);
 
-    function buttonClicks(direction) {
-        if (direction === "left") {
-            songList.scrollLeft -= 100;
-        }
-        else if (direction === "right") {
-            songList.scrollLeft += 100;
-        }
+    function scrollAmount() {
+        let list = songList.getElementsByTagName("li")[0];
+        if(!list) return 0;
+
+        let width = list.offsetWidth;
+        let style = window.getComputedStyle(songList);
+        let gap = (style.columnGap || style.gap) || 0;
+        let totalWidth = width + parseFloat(gap);
+        let calc = (Math.floor(songList.clientWidth / totalWidth) * totalWidth);
+        let cond = (Math.floor(songList.clientWidth / totalWidth) > 5 ? totalWidth * 2: totalWidth);
+        return calc - cond;
     }
-    leftBtn.addEventListener("click", () => buttonClicks("left"));
-    rightBtn.addEventListener("click", () => buttonClicks("right"));
+
+    let isScrolling = false;
+    function smoothScroll(amount) {
+        if (isScrolling) return;
+        isScrolling = true;
+
+        songList.scrollTo({
+            left: songList.scrollLeft + amount,
+            behavior: "smooth"
+        })
+        setTimeout(() => {
+            isScrolling = false;
+        }, 500);
+    }
+
+    leftBtn.addEventListener("click", () => {
+        smoothScroll(-scrollAmount());
+    });
+    rightBtn.addEventListener("click", () => {
+        smoothScroll(scrollAmount());
+    });
 });
