@@ -22,6 +22,10 @@ app.get("/upload", (req, res) => {
     res.sendFile(path.join(__dirname, "views", "upload.html"));
 })
 
+app.get("/api/uploadthing", (req,res) => {
+    res.send("Hello Uploadthing")
+})
+
 app.listen(PORT, () => {
     console.log("Server is live on http://localhost:3000");
 })

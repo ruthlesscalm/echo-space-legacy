@@ -1,8 +1,7 @@
-import { uploadFiles } from "https://cdn.uploadthing.com/uploadthing/client";
-
+console.log("clientUpload.js loaded");
 const form = document.getElementById("uploadForm");
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async(e) => {
     e.preventDefault();
     const title = document.getElementById("title").value;
     const artist = document.getElementById("artist").value;
@@ -13,4 +12,6 @@ form.addEventListener("submit", (e) => {
     console.log(title, artist, genre);
 
     console.log(song, thumbnail);
+
+    console.log("Uploading files");
 })
