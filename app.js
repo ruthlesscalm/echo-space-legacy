@@ -1,11 +1,32 @@
 import express from "express";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { createUploadthing , createRouteHandler} from "uploadthing/express";
+import dotenv from 'dotenv';
+dotenv.config();
+
+
 
 const app = express();
 const PORT = 3000;
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+const f = createUploadthing();
+
+const uploadthingRouter = {
+  songUploader: f({
+    audio: { maxFileSize: "16MB" },
+    image: { maxFileSize: "4MB" },
+  }).onUploadComplete(({ file }) => {
+    console.log("Uploaded file URL:", file.ufsUrl);
+  }),
+};
+
+
+app.use("/api/uploadthing" , createRouteHandler({
+    router: uploadthingRouter,
+}))
 
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -20,10 +41,6 @@ app.get("/register", (req, res) => {
 })
 app.get("/upload", (req, res) => {
     res.sendFile(path.join(__dirname, "views", "upload.html"));
-})
-
-app.get("/api/uploadthing", (req,res) => {
-    res.send("Hello Uploadthing")
 })
 
 app.listen(PORT, () => {
