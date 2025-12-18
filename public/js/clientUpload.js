@@ -1,3 +1,5 @@
+import { uploadFiles } from "https://cdn.uploadthing.com/uploadthing/client";
+
 const form = document.getElementById("uploadForm");
 
 form.addEventListener("submit", (e) => {
