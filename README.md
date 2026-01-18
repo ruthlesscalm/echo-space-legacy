@@ -38,22 +38,6 @@ No React. No SPA. No frontend frameworks.
 - No frontend state management
 - Not production-ready
 
-And that’s okay.
-
----
-
-## Why This Project Exists
-
-This project was an exploration phase.
-
-The goal was to:
-
-- Understand backend routing clearly
-- Experiment with SSR ideas
-- Integrate third-party services like UploadThing
-- Build something real without abstractions
-
-Mission accomplished.
 
 ---
 
@@ -78,11 +62,3 @@ A newer version of Echo Space will be built separately using a modern frontend a
 That’s it.
 
 ---
-
-## Final Note
-
-This project is not “incomplete”.
-
-It’s complete for the phase it represents.
-
-Moving on does not mean abandoning it.
