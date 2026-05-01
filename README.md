@@ -13,7 +13,7 @@ It is intentionally kept as-is and archived for reference.
 - Node.js
 - Express
 - Static HTML/CSS/JS
-- UploadThing (for file uploads)
+- EJS
 - dotenv
 
 No React. No SPA. No frontend frameworks.
@@ -23,9 +23,7 @@ No React. No SPA. No frontend frameworks.
 ## What This Version Does
 
 - Serves static pages (`/`, `/login`, `/register`, `/upload`)
-- Handles file uploads using UploadThing
 - Uses Express routing
-- Uses environment variables
 - Acts as a simple backend + static frontend combo
 
 ---
@@ -34,7 +32,6 @@ No React. No SPA. No frontend frameworks.
 
 - No React
 - No client-side routing
-- No advanced SSR
 - No frontend state management
 - Not production-ready
 
@@ -43,8 +40,6 @@ No React. No SPA. No frontend frameworks.
 
 ## Project Status
 
-**Archived / Frozen**
-
 This codebase is not actively developed anymore.
 It exists as a reference point and learning milestone.
 
@@ -52,7 +47,7 @@ A newer version of Echo Space will be built separately using a modern frontend a
 
 ---
 
-## How to Run (if you really want to)
+## How to Run
 
 1. Install dependencies
 2. Add a `.env` file
