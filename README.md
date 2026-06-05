@@ -14,7 +14,6 @@ It is intentionally kept as-is and archived for reference.
 - Express
 - Static HTML/CSS/JS
 - EJS
-- dotenv
 
 No React. No SPA. No frontend frameworks.
 
@@ -53,7 +52,5 @@ A newer version of Echo Space will be built separately using a modern frontend a
 2. Add a `.env` file
 3. Run the server
 4. Open `http://localhost:3000`
-
-That’s it.
 
 ---
